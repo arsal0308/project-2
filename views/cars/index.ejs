@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+<ul>
+    <% cars.forEach(function(c) { %>
+      <li>
+          
+        <a href="/cars/<%= c.id %>"><%= c.car %></a>
+            - 
+          <%= c.available ? 'available' : 'not available' %>
+        </li>
+      <% }); %>
+  </ul>
+</ul>
+
+<a href="/cars/new">Add a Car</a>
+
+<%- include('../partials/footer') %>
