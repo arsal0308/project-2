@@ -1,17 +1,27 @@
 <%- include('../partials/header') %>
 
-<ul>
+<table id="list">
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Available</th>
+    </tr>
+  </thead>
+  <tbody>
     <% cars.forEach(function(c) { %>
-      <li>
-          
-        <a href="/cars/<%= c.id %>"><%= c.car %></a>
-            - 
-          <%= c.available ? 'available' : 'not available' %>
-        </li>
+      <a href="/cars/<%= c._id %>"><%= c.car %></a>
+      <tr>
+        <td><%= c.year %></td>
+        <td><%= c.make %></td>
+        <td><%= c.model %></td>
+        <td><%= c.available ? "Yes" : "No" %></td>
+        <td><a href="/cars/<%= c._id %>">DETAILS</a></td>
+      </tr>
       <% }); %>
-  </ul>
-</ul>
+  </tbody>
+</table>
 
-<a href="/cars/new">Add a Car</a>
 
-<%- include('../partials/footer') %>

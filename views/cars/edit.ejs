@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
-<h2>Enter a New Car</h2>
-<form id="new-form" action="/cars/<%= car.id %>" method="POST">
+<h2>Edit Car</h2>
+<form>
   <label>Year:
     <input type="number" name="year">
   </label><br>
@@ -41,8 +41,9 @@
   <label>Available:
     <input type="Boolean" name="available">
   </label><br>
-  <button type="submit">Add Car</button>
+  <form action="/cars/<%= car.id %>?_method=PUT" method="POST">
+    <button type="submit" value="<%= car.car%>">Update Car</button>
+  </form>
 </form>
-<p><%= errorMsg %></p>
 
 <%- include('../partials/footer') %>

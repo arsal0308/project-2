@@ -10,6 +10,15 @@ router.get('/auth/google', passport.authenticate(
     'google',
   {
     successRedirect: '/cars',
+    failureRedirect: '/cars',
+    scope: ["profile", "email"],
+  }
+));
+
+router.get('/oauth2callback', passport.authenticate(
+  'google',
+  {
+    successRedirect: '/cars',
     failureRedirect: '/cars'
   }
 ));
