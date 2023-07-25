@@ -35,7 +35,7 @@ const carSchema = new Schema({
   engine: String,
   transmission: String,
   vehicleCondition: String,
-  Available: { type: Boolean, default: true },
+  available: { type: Boolean, default: true },
   reviews: [reviewSchema]
 }, {
   timestamps: true

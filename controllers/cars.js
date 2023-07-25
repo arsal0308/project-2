@@ -24,9 +24,9 @@ function newCar(req, res) {
 }
 
 async function create(req, res) {
-  // if (req.body.available === 'yes') {
-    req.body.available = true
-  // }
+  if (req.body.available === 'no') {
+    req.body.available = false
+  }
   try {
     const car = await Car.create(req.body);
     res.redirect(`/cars/${car._id}`);
