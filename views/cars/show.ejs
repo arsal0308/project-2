@@ -23,7 +23,8 @@
     <div><%= car.transmission %></div>
     <div>Vehicle Condition: </div>
     <div><%= car.vehicleCondition %></div>
-    <h3>Available: <%= car.available ? 'Yes' : 'No' %></h3>
+    <div>Available: </div>
+    <div><%= car.available ? 'Yes' : 'No' %></div>
   </section>
 
   <a href="/cars/<%= car._id %>/edit">Edit Car</a>

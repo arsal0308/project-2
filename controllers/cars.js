@@ -6,11 +6,11 @@ async function index(req, res) {
 }
 async function show(req, res) {
   const car = await Car.findById(req.params.id);
+  console.log(car);
   res.render('cars/show', { title: 'Car Detail', car });
 }
 async function edit(req, res) {
   const car = await Car.findById(req.params.id);
-  console.log(car);
   res.render('cars/edit', { title: 'Edit Car', car});
 }
 
@@ -24,10 +24,9 @@ function newCar(req, res) {
 }
 
 async function create(req, res) {
-  req.body.available = !!req.body.available;
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key];
-  }
+  // if (req.body.available === 'yes') {
+    req.body.available = true
+  // }
   try {
     const car = await Car.create(req.body);
     res.redirect(`/cars/${car._id}`);

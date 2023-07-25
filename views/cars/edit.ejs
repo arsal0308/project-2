@@ -39,7 +39,9 @@
     </select>
   </label><br>
   <label>Available:
-    <input type="Boolean" name="available">
+    <select name="available">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
   </label><br>
   <form action="/cars/<%= car.id %>?_method=PUT" method="POST">
     <button type="submit" value="<%= car.car%>">Update Car</button>
