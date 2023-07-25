@@ -9,7 +9,7 @@ async function show(req, res) {
   res.render('cars/show', { title: 'Car Detail', car });
 }
 async function edit(req, res) {
-  const car = await Car.find({});
+  const car = await Car.findById(req.params.id);
   console.log(car);
   res.render('cars/edit', { title: 'Edit Car', car});
 }

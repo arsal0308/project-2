@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <h2>Enter a New Car</h2>
-<form id="new-form" action="/cars/<%= car.id %>" method="POST">
+<form id="new-form" action="/cars" method="POST">
   <label>Year:
     <input type="number" name="year">
   </label><br>
@@ -43,6 +43,5 @@
   </label><br>
   <button type="submit">Add Car</button>
 </form>
-<p><%= errorMsg %></p>
 
 <%- include('../partials/footer') %>
