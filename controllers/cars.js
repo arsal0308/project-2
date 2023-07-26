@@ -6,7 +6,6 @@ async function index(req, res) {
 }
 async function show(req, res) {
   const car = await Car.findById(req.params.id);
-  console.log(car);
   res.render('cars/show', { title: 'Car Detail', car });
 }
 async function edit(req, res) {
@@ -14,12 +13,28 @@ async function edit(req, res) {
   res.render('cars/edit', { title: 'Edit Car', car});
 }
 
-async function updateOne(req, res) {
-  Car.update(req.params.id, req.body);
-console.log(req.params.id);
-console.log(req.body);
-  res.redirect(`cars/${req.params.id}`);
-}
+// async function updateOne(req, res) {
+//   console.log(“====updateOne reached===”)
+//    console.log(req.body);
+//    console.log(req.params);
+  
+//   const dbres = await Car.updateOne({ id: req.params.id}, req.body);
+//     console.log(dbres);
+//     res.redirect(`cars/${req.params.id}`);
+//   }
+  async function updateOne(req, res) {
+    try {
+      const updatedCar = await Car.findOneAndUpdate(
+        {_id: req.params.id, userRecommending: req.user._id},
+        req.body,
+        {new: true}
+      );
+      return res.redirect(`/cars/${updatedCar._id}`);
+    } catch (e) {
+      console.log(e.message);
+      return res.redirect('/cars');
+    }
+  }
 
 function newCar(req, res) {
   res.render('cars/new', { title: 'Add Car'});

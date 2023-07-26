@@ -9,7 +9,7 @@ router.get('/:id', carsCtrl.show);
 router.get('/:id/edit', ensureLoggedIn, carsCtrl.edit);
 router.post('/', ensureLoggedIn, carsCtrl.create);
 router.delete('/:id', ensureLoggedIn, carsCtrl.delete);
-router.put('/:id', ensureLoggedIn, carsCtrl.update);
+router.put('/:id', ensureLoggedIn, carsCtrl.updateOne);
 
 module.exports = router;
 
