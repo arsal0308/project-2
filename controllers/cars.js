@@ -15,9 +15,6 @@ async function edit(req, res) {
 
 async function updateOne(req, res) {
   try {
-    // console.log("===== reached updateOne");
-    // console.log(req.params);
-    // console.log(req.body);
     const updatedCar = await Car.findOneAndUpdate(
       { _id: req.params.id },
       req.body,
@@ -48,14 +45,6 @@ async function create(req, res) {
   }
 }
 
-// async function deleteOne(req, res) {
-//   const car = await Car.findOne({ 'cars._id': req.params.id, 'cars.user': req.user._id });
-//   if (!car) return res.redirect('/cars');
-//   car.remove(req.params.id);
-//   await car.save();
-//   res.redirect(`/cars/${car._id}`);
-// }
-
 module.exports = {
   index,
   show,
@@ -63,5 +52,4 @@ module.exports = {
   updateOne,
   new: newCar,
   create,
-  // delete: deleteOne
 };
