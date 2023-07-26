@@ -7,6 +7,7 @@
       <th>Year</th>
       <th>Make</th>
       <th>Model</th>
+      <th>Price</th>
       <th>Available</th>
     </tr>
   </thead>
@@ -17,6 +18,7 @@
         <td><%= c.year %></td>
         <td><%= c.make %></td>
         <td><%= c.model %></td>
+        <td><%= `$${c.price}` %></td>
         <td><%= c.available ? "Yes" : "No" %></td>
         <td><a href="/cars/<%= c._id %>">Details</a></td>
       </tr>

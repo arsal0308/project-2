@@ -1,6 +1,14 @@
+ html {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Anton', sans-serif;
+  font-size: 25px;
+}
+
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
