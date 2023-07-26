@@ -28,14 +28,6 @@
   </section>
 
   <a href="/cars/<%= car._id %>/edit">Edit Car</a>
-    <td>
-      <% if (user?._id.equals(car.user)) { %>
-        <form action="/cars/<%= car._id %>?_method=DELETE" method="POST">
-          <button type="submit">X</button>
-        </form>
-      <% } %>
-    </td>
-
   <h3><%= car.car %></h3>
 
 

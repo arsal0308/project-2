@@ -14,8 +14,10 @@ async function edit(req, res) {
   res.render('cars/edit', { title: 'Edit Car', car});
 }
 
-async function update(req, res) {
+async function updateOne(req, res) {
   Car.update(req.params.id, req.body);
+console.log(req.params.id);
+console.log(req.body);
   res.redirect(`cars/${req.params.id}`);
 }
 
@@ -36,7 +38,7 @@ async function create(req, res) {
   }
 }
 
-async function deleteCar(req, res) {
+async function deleteOne(req, res) {
   const car = await Car.findOne({ 'cars._id': req.params.id, 'cars.user': req.user._id });
   if (!car) return res.redirect('/cars');
   car.remove(req.params.id);
@@ -48,8 +50,8 @@ module.exports = {
   index,
   show,
   edit,
-  update,
+  updateOne,
   new: newCar,
   create,
-  delete: deleteCar
+  delete: deleteOne
 };

@@ -1,7 +1,8 @@
 <%- include('../partials/header') %>
 
 <h2>Edit Car</h2>
-<form>
+<form action="/cars/<%= car.id %>?_method=PUT" method="POST">
+  <input type="text" name="car" value="<%= car.car %>">
   <label>Year:
     <input type="number" name="year">
   </label><br>
@@ -39,13 +40,9 @@
     </select>
   </label><br>
   <label>Available:
-    <select name="available">
-    <option value="Yes">Yes</option>
-    <option value="No">No</option>
+    <input type="Boolean" name="available">
   </label><br>
-  <form action="/cars/<%= car.id %>?_method=PUT" method="POST">
-    <button type="submit" value="<%= car.car%>">Update Car</button>
-  </form>
+  <button type="submit">Update Car</button>
 </form>
 
 <%- include('../partials/footer') %>
