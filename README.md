@@ -1,5 +1,6 @@
 Mash Motors
-This is a car dealership web application that lets you view vehicles listed by a logged in user. Once logged in, you are able to add, update, and delete cars. As well as, you are able to leave ratings and reviews of vehicles that are listed. 
+
+This is a car dealership web application that lets you view vehicles listed by a logged in user. Once logged in, you are able to add and update cars. As well as, you are able to add or delete ratings and reviews of vehicles that are listed. 
 
 Screenshots:
 
