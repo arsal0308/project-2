@@ -1,7 +1,9 @@
 <%- include('../partials/header') %>
 
+<br>
 <h2>Enter a New Car</h2>
-<form id="new-form" action="/cars" method="POST">
+<canvas>
+  <form id="new-form" action="/cars" method="POST">
   <label>Year:
     <input type="number" name="year">
   </label><br>
@@ -42,6 +44,6 @@
     <input type="Boolean" name="available">
   </label><br>
   <button type="submit">Add Car</button>
-</form>
-
+  </form>
+</canvas>
 <%- include('../partials/footer') %>

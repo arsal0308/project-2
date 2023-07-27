@@ -74,3 +74,27 @@ a {
   justify-content: center;
   align-items: center;
 }
+
+table {
+    background-color: white;
+    width: 90vw;
+    max-width: 40em;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: .5em;
+    border-radius: 0.5em;
+  }
+
+  canvas {
+    background-color: white;
+    width: 90vw;
+    max-width: 40em;
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: .5em;
+    border-radius: 0.5em;
+  }
