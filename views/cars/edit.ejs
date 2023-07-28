@@ -3,34 +3,34 @@
 <h2>Edit Car</h2>
 <form action="/cars/<%= car._id %>?_method=PUT" method="POST">
   <label>Year:
-    <input type="number" name="year">
+    <input type="number" name="year" value="<%= car.year %>">
   </label><br>
   <label>Make:
-    <input type="string" name="make">
+    <input type="string" name="make" value="<%= car.make %>">
   </label><br>
   <label>Model: 
-    <input type="string" name="model">
+    <input type="string" name="model" value="<%= car.model %>">
   </label><br>
   <label>Price:
-    <input type="number" name="price">
+    <input type="number" name="price" value="<%= car.price %>">
   </label><br>
   <label>Body Style:
-    <input type="string" name="bodyStyle">
+    <input type="string" name="bodyStyle" value="<%= car.bodyStyle %>">
   </label><br>
   <label>Exterior:
-    <input type="text" name="exterior">
+    <input type="text" name="exterior" value="<%= car.exterior %>">
   </label><br>
   <label>Interior:
-    <input type="text" name="interior">
+    <input type="text" name="interior" value="<%= car.interior %>">
   </label><br>
   <label>Fuel Economy:
-    <input type="string" name="fuelEconomy">
+    <input type="string" name="fuelEconomy" value="<%= car.fuelEconomy %>">
   </label><br>
   <label>Engine:
-    <input type="string" name="engine">
+    <input type="string" name="engine" value="<%= car.engine %>">
   </label><br>
   <label>Transmission:
-    <input type="string" name="transmission">
+    <input type="string" name="transmission" value="<%= car.transmission %>">
   </label><br>
   <label>Vehicle Condition:
     <select name="vehicleCondition">

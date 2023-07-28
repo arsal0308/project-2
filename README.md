@@ -24,4 +24,4 @@ Screenshots:
 ## Next Steps
 Future enhancement one: As a user, when I log in I want to see saved vehicles that I have selected.
 
-Future enhancement two: As a visitor, I want to be able to upload and browse through photos of the vehicle.
+Future enhancement two: As a visitor, I want to be able to view photos of the vehicle, and as a user I want to be able to upload photos.
