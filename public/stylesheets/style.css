@@ -91,7 +91,7 @@ table {
 
   #new-car {
     background-color: white;
-    width: 90vw;
+    width: 50vw;
     max-width: 40em;
     position: relative;
     transform: translate(-50%, -50%);
@@ -100,6 +100,43 @@ table {
     padding: .5em;
     border-radius: 0.5em;
     margin: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #new-car input[type="string"] {
+    width: 8rem;
+    grid-column: 2 / 3;
+    border-radius: 0.5em;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+  }
+  #new-car input[type="number"] {
+    width: 8rem;
+    grid-column: 2 / 3;
+    border-radius: 0.5em;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+  }
+  #new-car input[type="text"] {
+    width: 8rem;
+    grid-column: 2 / 3;
+    border-radius: 0.5em;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+  }
+  #new-car input[type="Boolean"] {
+    width: 8rem;
+    grid-column: 2 / 3;
+    border-radius: 0.5em;
     display: grid;
     grid-template-columns: auto auto;
     justify-content: center;
